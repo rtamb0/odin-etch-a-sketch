@@ -22,16 +22,20 @@ const gridDiv = document.querySelectorAll('.grid-divs');
 
 function penDraw() {
     let isClicked = false;
-    divsContainer.addEventListener('mousedown', (e) => {
-        isClicked = true;
-    });
-    divsContainer.addEventListener('mouseup', (e) => {
-        isClicked = false;
-    });
     gridDiv.forEach((div) => {
         div.addEventListener('mouseover', (e) => {
+            div.addEventListener('mousedown', (e) => {
+                isClicked = true;
+                div.classList.add('coloring');
+                console.log(isClicked)
+            });
+            div.addEventListener('mouseup', (e) => {
+                isClicked = false;
+                console.log(isClicked)
+            });
             if (isClicked === true) {
                 div.classList.add('coloring');
+                console.log(e)
             };
         });
     });
