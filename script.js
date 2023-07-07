@@ -8,11 +8,14 @@ const divsContainer = document.querySelector('#square-divs');
     // Repeat 16 times
 // END FOR
 
-function createDiv(amount) {
+function createDiv(amount, className) {
     for (let i = 1; i <= amount; i++) {
         const div = document.createElement('div');
         divsContainer.appendChild(div);
+        if (className !== undefined) {
+            div.classList.add(className);
+        }
     }
 }
 
-createDiv(16)
+createDiv(16, "first-row")
