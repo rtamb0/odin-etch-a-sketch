@@ -20,8 +20,10 @@ createDiv(16, 16);
 
 const gridDiv = document.querySelectorAll('.grid-divs');
 
-gridDiv.forEach((div) => {
-    div.addEventListener('mouseover', (e) => {
-        div.classList.add('coloring');
+function penDraw() {
+    gridDiv.forEach((div) => {
+        div.addEventListener('mouseover', (e) => {
+            div.classList.add('coloring');
+        });
     });
-});
+};
