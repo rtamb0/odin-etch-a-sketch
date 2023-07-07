@@ -12,7 +12,7 @@ const secondRow = document.querySelector('.second-row');
 
 // Create loop that creates the row container
 
-function createDiv(amount, row) {
+function createDiv(amount, row = 1) {
     for (let i = 1; i <= row; i++) {
         const divRow = document.createElement('div');
         divRow.classList.add('row-divs');
