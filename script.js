@@ -21,14 +21,6 @@ createDiv(16, 16);
 const gridDiv = document.querySelectorAll('.grid-divs');
 
 function penDraw() {
-    gridDiv.forEach((div) => {
-        div.addEventListener('mouseover', (e) => {
-                div.classList.add('coloring');
-        });
-    });
-};
-
-function clicked() {
     let isClicked = false;
     divsContainer.addEventListener('mousedown', (e) => {
         isClicked = true;
@@ -36,4 +28,13 @@ function clicked() {
     divsContainer.addEventListener('mouseup', (e) => {
         isClicked = false;
     });
-}
+    gridDiv.forEach((div) => {
+        div.addEventListener('mouseover', (e) => {
+            if (isClicked === true) {
+                div.classList.add('coloring');
+            };
+        });
+    });
+};
+
+penDraw()
