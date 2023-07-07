@@ -1,5 +1,4 @@
 const divsContainer = document.querySelector('#square-divs');
-const div = document.createElement('div');
 
 // Create divs 16 times with loop
 
@@ -9,6 +8,11 @@ const div = document.createElement('div');
     // Repeat 16 times
 // END FOR
 
-for (let i = 1; i <= 16; i++) {
-    divsContainer.appendChild(document.createElement('div'));
+function createDiv(amount) {
+    for (let i = 1; i <= amount; i++) {
+        const div = document.createElement('div');
+        divsContainer.appendChild(div);
+    }
 }
+
+createDiv(16)
