@@ -1,4 +1,6 @@
 const divsContainer = document.querySelector('#square-divs');
+const firstRow = document.querySelector('.first-row');
+const secondRow = document.querySelector('.second-row');
 
 // Create divs 16 times with loop
 
@@ -18,5 +20,5 @@ function createDiv(amount, className) {
     };
 };
 
-createDiv(16, "first-row");
-createDiv(16, "second-row")
+createDiv(16);
+createDiv(16);
