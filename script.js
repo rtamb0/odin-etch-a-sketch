@@ -37,4 +37,4 @@ function penDraw() {
     });
 };
 
-penDraw()
+penDraw();
