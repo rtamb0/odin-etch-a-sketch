@@ -23,7 +23,17 @@ const gridDiv = document.querySelectorAll('.grid-divs');
 function penDraw() {
     gridDiv.forEach((div) => {
         div.addEventListener('mouseover', (e) => {
-            div.classList.add('coloring');
+                div.classList.add('coloring');
         });
     });
 };
+
+function clicked() {
+    let isClicked = false;
+    divsContainer.addEventListener('mousedown', (e) => {
+        isClicked = true;
+    });
+    divsContainer.addEventListener('mouseup', (e) => {
+        isClicked = false;
+    });
+}
