@@ -10,15 +10,14 @@ const secondRow = document.querySelector('.second-row');
     // Repeat 16 times
 // END FOR
 
-function createDiv(amount, className) {
+// Create loop that creates the row container
+
+function createDiv(amount, rowClass) {
     for (let i = 1; i <= amount; i++) {
         const div = document.createElement('div');
-        divsContainer.appendChild(div);
-        if (className !== undefined) {
-            div.classList.add(className);
-        };
+        rowClass.appendChild(div);
     };
 };
 
-createDiv(16);
-createDiv(16);
+createDiv(16, firstRow);
+createDiv(16, secondRow);
