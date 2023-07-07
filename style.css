@@ -4,11 +4,11 @@
     padding: 0;
 }
 
-.first-row, .second-row {
+.row-divs {
     display: flex;
 }
 
-.first-row div, .second-row div {
+.row-divs div {
     border-style: solid;
     height: 50px;
     width: 50px;
