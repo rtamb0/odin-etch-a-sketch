@@ -8,3 +8,7 @@ const div = document.createElement('div');
     // Append it to divsContainer
     // Repeat 16 times
 // END FOR
+
+for (let i = 1; i <= 16; i++) {
+    divsContainer.appendChild(document.createElement('div'));
+}
