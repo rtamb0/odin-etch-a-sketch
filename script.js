@@ -10,9 +10,12 @@ function createDiv(amount, row = 1) {
         divsContainer.appendChild(divRow);
         for (let i = 1; i <= amount; i++) {
             const div = document.createElement('div');
+            div.classList.add('grid-divs');
             divRow.appendChild(div);
         };
     }
 };
 
 createDiv(16, 16);
+
+const gridDiv = document.querySelectorAll('.grid-divs')
