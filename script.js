@@ -14,8 +14,9 @@ function createDiv(amount, className) {
         divsContainer.appendChild(div);
         if (className !== undefined) {
             div.classList.add(className);
-        }
-    }
-}
+        };
+    };
+};
 
-createDiv(16, "first-row")
+createDiv(16, "first-row");
+createDiv(16, "second-row")
