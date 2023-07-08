@@ -6,20 +6,17 @@
 
 .etch-a-sketch {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
 }
 
 #square-divs {
     user-select: none;
-    display: flex;
-    flex-direction: column;
     width: 40%;
 }
 
 .row-divs {
     display: flex;
-    width: 100%;
 }
 
 .grid-divs {
