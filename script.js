@@ -18,6 +18,16 @@ function createDiv(amount) {
 
 createDiv(16);
 
+function changeDiv(amount) {
+    const divRow = document.querySelectorAll('.row-divs');
+    divRow.forEach((row) => {
+        while (row.firstChild) {
+        row.removeChild(row.lastChild);
+        };
+    });
+    createDiv(amount);
+}
+
 const gridDiv = document.querySelectorAll('.grid-divs');
 
 function penDraw() {
