@@ -44,15 +44,12 @@ function penDraw() {
             div.addEventListener('mousedown', (e) => {
                 isClicked = true;
                 div.classList.add('coloring');
-                console.log(isClicked)
             });
             div.addEventListener('mouseup', (e) => {
                 isClicked = false;
-                console.log(isClicked)
             });
             if (isClicked === true) {
                 div.classList.add('coloring');
-                console.log(e)
             };
         });
     });
@@ -63,6 +60,25 @@ function resetDraw() {
     gridDiv.forEach((div) => {
         div.classList.remove('coloring');
     })
+}
+
+function penEraser() {
+    const gridDiv = document.querySelectorAll('.grid-divs');
+    let isClicked = false;
+    gridDiv.forEach((div) => {
+        div.addEventListener('mouseover', (e) => {
+            div.addEventListener('mousedown', (e) => {
+                isClicked = true;
+                div.classList.remove('coloring');
+            });
+            div.addEventListener('mouseup', (e) => {
+                isClicked = false;
+            });
+            if (isClicked === true) {
+                div.classList.remove('coloring');
+            };
+        });
+    });
 }
 
 createDiv(16);
