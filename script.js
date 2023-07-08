@@ -58,5 +58,12 @@ function penDraw() {
     });
 };
 
+function resetDraw() {
+    const gridDiv = document.querySelectorAll('.grid-divs');
+    gridDiv.forEach((div) => {
+        div.classList.remove('coloring');
+    })
+}
+
 createDiv(16);
 penDraw();
