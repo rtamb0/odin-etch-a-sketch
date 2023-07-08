@@ -16,9 +16,12 @@ function createDiv(amount) {
     }
 };
 
-createDiv(16);
-
 function changeDiv(amount) {
+    if (amount === undefined || amount === null) return;
+    while (amount > 100 || amount < 1) {
+        amount = prompt('That number is not appropriate! Try again');
+        if (amount === undefined || amount === null) return;
+    }
     const divRow = document.querySelectorAll('.row-divs');
     divRow.forEach((row) => {
         while (row.firstChild) {
@@ -51,4 +54,5 @@ function penDraw() {
     });
 };
 
+createDiv(16);
 penDraw();
