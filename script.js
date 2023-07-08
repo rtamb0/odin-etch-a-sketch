@@ -1,10 +1,9 @@
-const divsContainer = document.querySelector('#square-divs');
-
 // Create divs with loop
 // Create loop that creates the row container
 
 function createDiv(amount) {
     for (let i = 1; i <= amount; i++) {
+        const divsContainer = document.querySelector('#square-divs');
         const divRow = document.createElement('div');
         divRow.classList.add('row-divs');
         divsContainer.appendChild(divRow);
