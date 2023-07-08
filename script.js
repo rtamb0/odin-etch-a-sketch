@@ -15,9 +15,10 @@ function createDiv(amount) {
     }
 };
 
-function changeDiv(amount) {
-    if (amount === undefined || amount === null) return;
-    while (amount > 100 || amount < 1) {
+function changeDiv(number) {
+    if (number === undefined || number === null) return;
+    amount = Number(number);
+    while (amount > 100 || amount < 1 || isNaN(amount) === true) {
         amount = prompt('That number is not appropriate! Try again');
         if (amount === undefined || amount === null) return;
     }
