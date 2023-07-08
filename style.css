@@ -4,15 +4,19 @@
     padding: 0;
 }
 
+section {
+    display: flex;
+    justify-content: space-between;
+}
+
 .etch-a-sketch {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
 }
 
 #square-divs {
     user-select: none;
-    width: 40%;
+    width: 911px;
 }
 
 .row-divs {
@@ -28,4 +32,14 @@
 
 .coloring {
     background-color: teal;
+}
+
+.pen-option {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pen-option button {
+    flex: 1;
 }
