@@ -26,11 +26,11 @@ function changeDiv(amount) {
         };
     });
     createDiv(amount);
+    penDraw();
 }
 
-const gridDiv = document.querySelectorAll('.grid-divs');
-
 function penDraw() {
+    const gridDiv = document.querySelectorAll('.grid-divs');
     let isClicked = false;
     gridDiv.forEach((div) => {
         div.addEventListener('mouseover', (e) => {
