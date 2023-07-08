@@ -6,8 +6,8 @@
 
 .etch-a-sketch {
     display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 #square-divs {
