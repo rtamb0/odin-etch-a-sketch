@@ -23,11 +23,15 @@ function changeDiv(number) {
         if (amount === undefined || amount === null) return;
     }
     const divRow = document.querySelectorAll('.row-divs');
+    const divsContainer = document.querySelector('#square-divs');
     divRow.forEach((row) => {
         while (row.firstChild) {
         row.removeChild(row.lastChild);
         };
     });
+    while (divsContainer.firstChild) {
+        divsContainer.removeChild(divsContainer.lastChild);
+    }
     createDiv(amount);
     penDraw();
 }
