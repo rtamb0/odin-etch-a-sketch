@@ -42,6 +42,19 @@ function changeDiv(number) {
 }
 
 let color = 'black';
+const colorMessage = document.createElement('div');
+
+const colorSection = document.querySelector('.change-color');
+colorSection.appendChild(colorMessage);
+
+colorMessage.textContent = `You are now using ${color}!`
+
+const colorButton = document.querySelectorAll('.change-color');
+colorButton.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        colorMessage.textContent = `You are now using ${color}!`
+    })
+})
 
 function penDraw() {
     const gridDiv = document.querySelectorAll('.grid-divs');
