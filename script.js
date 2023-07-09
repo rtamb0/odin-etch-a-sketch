@@ -113,7 +113,12 @@ colorButton.forEach((button) => {
     });
 });
 
+const drawButton = document.querySelector('#draw');
+const eraserButton = document.querySelector('#eraser');
+
 function penDraw() {
+    drawButton.classList.add('selected');
+    eraserButton.classList.remove('selected');
     const gridDiv = document.querySelectorAll('.grid-divs');
     let isClicked = false;
     gridDiv.forEach((div) => {
@@ -196,6 +201,8 @@ function resetDraw() {
 };
 
 function penEraser() {
+    eraserButton.classList.add('selected');
+    drawButton.classList.remove('selected');
     const gridDiv = document.querySelectorAll('.grid-divs');
     let isClicked = false;
     gridDiv.forEach((div) => {
