@@ -36,6 +36,8 @@ function changeDiv(number) {
     penDraw();
 }
 
+let color = 'black';
+
 function penDraw() {
     const gridDiv = document.querySelectorAll('.grid-divs');
     let isClicked = false;
@@ -136,9 +138,6 @@ function penEraser() {
         });
     });
 };
-
-
-let color = 'black';
 
 createDiv(16);
 penDraw();
