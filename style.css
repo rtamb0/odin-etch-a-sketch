@@ -52,3 +52,7 @@ section {
 .pen-option button {
     flex: 1;
 }
+
+.selected {
+    background-color: darkslategray;
+}
