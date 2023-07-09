@@ -28,6 +28,14 @@ button {
     margin: 5px;
 }
 
+.change-grid h5 {
+    font-size: 15px
+}
+
+.change-grid div {
+    font-size: 50px;
+}
+
 .etch-a-sketch {
     display: flex;
     flex-direction: row;
