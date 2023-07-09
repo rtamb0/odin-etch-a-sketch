@@ -15,7 +15,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-left: 100px;
+    margin: 0 10vh;
 }
 
 .etch-a-sketch {
