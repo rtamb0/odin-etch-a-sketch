@@ -30,7 +30,7 @@ section {
 
 #square-divs {
     user-select: none;
-    width: 911px;
+    width: 100vh;
 }
 
 .row-divs {
