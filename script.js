@@ -43,13 +43,13 @@ function penDraw() {
         div.addEventListener('mouseover', (e) => {
             div.addEventListener('mousedown', (e) => {
                 isClicked = true;
-                div.classList.add('black');
+                div.classList.add('coloring');
             });
             div.addEventListener('mouseup', (e) => {
                 isClicked = false;
             });
             if (isClicked === true) {
-                div.classList.add('black');
+                div.classList.add('coloring');
             };
         });
     });
@@ -58,7 +58,7 @@ function penDraw() {
 function resetDraw() {
     const gridDiv = document.querySelectorAll('.grid-divs');
     gridDiv.forEach((div) => {
-        div.classList.remove('black');
+        div.classList.remove('coloring');
     })
 };
 
@@ -69,13 +69,13 @@ function penEraser() {
         div.addEventListener('mouseover', (e) => {
             div.addEventListener('mousedown', (e) => {
                 isClicked = true;
-                div.classList.remove('black');
+                div.classList.remove('coloring');
             });
             div.addEventListener('mouseup', (e) => {
                 isClicked = false;
             });
             if (isClicked === true) {
-                div.classList.remove('black');
+                div.classList.remove('coloring');
             };
         });
     });
@@ -92,6 +92,8 @@ function penEraser() {
     // END FOR
 // END FUNCTION
 // Put the function in penDraw()
+
+
 
 createDiv(16);
 penDraw();
