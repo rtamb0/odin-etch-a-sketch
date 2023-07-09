@@ -19,6 +19,10 @@ button {
     border-radius: 10px;
 }
 
+.description h1 {
+    font-size: 40px;
+}
+
 .info {
     text-align: center;
     display: flex;
