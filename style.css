@@ -7,7 +7,7 @@
 
 section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .info {
@@ -15,12 +15,18 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 100px;
 }
 
 .etch-a-sketch {
     display: flex;
     flex-direction: row;
 }
+
+.etch-a-sketch > button {
+    padding: 0 40px;
+}
+
 
 #square-divs {
     user-select: none;
