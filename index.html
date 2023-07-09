@@ -12,7 +12,6 @@
                 <div class="description">
                     <h1>Etch-a-Sketch!</h1>
                     <p>About:<br>Another project that I did from The Odin Project!<br>Press your mouse in order to draw!<br>P.S. I took the extra liberty to add a reset & change color button ;)</p>
-                    <button onclick="changeDiv(prompt('Put the number of grid squares between 1-100 that you want to change to'))">Change Grid</button>
                 </div>
                 <div class="change-color">
                     <h3>Change Color:</h3>
@@ -25,6 +24,11 @@
                     <button onclick="color = 'brown'">Brown</button>
                     <button onclick="color = 'grey'">Grey</button>
                     <button onclick="color = 'black'">Black</button>
+                </div>
+                <div class="change-grid">
+                    <h3>Change Grid:</h3>
+                    <button onclick="changeDiv(prompt('Put the number of grid squares between 1-100 that you want to change to'))">Change</button>
+                    <h5>The current grid is</h5>
                 </div>
             </div>
             <div class="etch-a-sketch">
