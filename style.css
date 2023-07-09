@@ -18,6 +18,11 @@ section {
     margin: 0 10vh;
 }
 
+button {
+    border-style: solid;
+    border-radius: 10px;
+}
+
 .etch-a-sketch {
     display: flex;
     flex-direction: row;
