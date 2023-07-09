@@ -82,5 +82,16 @@ function penEraser() {
 };
 
 
+// Make a changeColor() that changes the value of a variable every time the color changes
+
+// FUNCTION changeColor()
+    // FOR EACH DIVS
+        // LET .coloring = background-color black (default)
+        // IF a specific colour button pressed
+        // Change the color variable to that color by background-color = ??
+    // END FOR
+// END FUNCTION
+// Put the function in penDraw()
+
 createDiv(16);
 penDraw();
