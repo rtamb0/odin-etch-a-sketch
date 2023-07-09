@@ -59,17 +59,56 @@ let color = 'black';
 const colorButton = document.querySelectorAll('.color-button');
 colorButton.forEach((button) => {
     const buttonValue = button.getAttribute('value');
+    if (buttonValue === 'black') {
+        button.style.backgroundColor = 'black';
+        button.style.color = 'white';
+    };
     button.addEventListener('click', (e) => {
         colorButton.forEach((button) => {
             button.removeAttribute('style');
         });
         switch (buttonValue) {
+            case 'black':
+                color = buttonValue;
+                button.style.backgroundColor = '#000000';
+                button.style.color = 'white';
+                break;
             case 'red':
-                button.style.backgroundColor = 'red'
-                console.log(e);
+                color = buttonValue;
+                button.style.backgroundColor = '#bf1520';
                 break;
             case 'green':
-                button.style.backgroundColor = 'green'
+                color = buttonValue;
+                button.style.backgroundColor = '#13b804';
+                break;
+            case 'blue':
+                color = buttonValue;
+                button.style.backgroundColor = '#0e37cc';
+                button.style.color = 'white';
+                break;
+            case 'yellow':
+                color = buttonValue;
+                button.style.backgroundColor = '#ccb30e';
+                break;
+            case 'purple':
+                color = buttonValue;
+                button.style.backgroundColor = '#670ecc';
+                button.style.color = 'white';
+                break;
+            case 'orange':
+                color = buttonValue;
+                button.style.backgroundColor = '#cc640e';
+                break;
+            case 'brown':
+                color = buttonValue;
+                button.style.backgroundColor = '#422f1e';
+                button.style.color = 'white';
+                break;
+            case 'grey':
+                color = buttonValue;
+                button.style.backgroundColor = '#5c5b5a';
+                button.style.color = 'white';
+                break;
         };
     });
 });
