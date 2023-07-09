@@ -43,13 +43,69 @@ function penDraw() {
         div.addEventListener('mouseover', (e) => {
             div.addEventListener('mousedown', (e) => {
                 isClicked = true;
-                div.classList.add('coloring');
+                switch (color) {
+                    case 'black':
+                        div.style.backgroundColor = '#000000';
+                        break;
+                    case 'red':
+                        div.style.backgroundColor = '#bf1520';
+                        break;
+                    case 'green':
+                        div.style.backgroundColor = '#13b804';
+                        break;
+                    case 'blue':
+                        div.style.backgroundColor = '#0e37cc';
+                        break;
+                    case 'yellow':
+                        div.style.backgroundColor = '#ccb30e';
+                        break;
+                    case 'purple':
+                        div.style.backgroundColor = '#670ecc';
+                        break;
+                    case 'orange':
+                        div.style.backgroundColor = '#cc640e';
+                        break;
+                    case 'brown':
+                        div.style.backgroundColor = '#422f1e';
+                        break;
+                    case 'grey':
+                        div.style.backgroundColor = '#5c5b5a';
+                        break;
+                };
             });
             div.addEventListener('mouseup', (e) => {
                 isClicked = false;
             });
             if (isClicked === true) {
-                div.classList.add('coloring');
+                switch (color) {
+                    case 'black':
+                        div.style.backgroundColor = '#000000';
+                        break;
+                    case 'red':
+                        div.style.backgroundColor = '#bf1520';
+                        break;
+                    case 'green':
+                        div.style.backgroundColor = '#13b804';
+                        break;
+                    case 'blue':
+                        div.style.backgroundColor = '#0e37cc';
+                        break;
+                    case 'yellow':
+                        div.style.backgroundColor = '#ccb30e';
+                        break;
+                    case 'purple':
+                        div.style.backgroundColor = '#670ecc';
+                        break;
+                    case 'orange':
+                        div.style.backgroundColor = '#cc640e';
+                        break;
+                    case 'brown':
+                        div.style.backgroundColor = '#422f1e';
+                        break;
+                    case 'grey':
+                        div.style.backgroundColor = '#5c5b5a';
+                        break;
+                };
             };
         });
     });
@@ -58,7 +114,7 @@ function penDraw() {
 function resetDraw() {
     const gridDiv = document.querySelectorAll('.grid-divs');
     gridDiv.forEach((div) => {
-        div.classList.remove('coloring');
+        div.removeAttribute('style');
     })
 };
 
@@ -69,31 +125,20 @@ function penEraser() {
         div.addEventListener('mouseover', (e) => {
             div.addEventListener('mousedown', (e) => {
                 isClicked = true;
-                div.classList.remove('coloring');
+                div.removeAttribute('style');
             });
             div.addEventListener('mouseup', (e) => {
                 isClicked = false;
             });
             if (isClicked === true) {
-                div.classList.remove('coloring');
+                div.removeAttribute('style');
             };
         });
     });
 };
 
 
-// Make a changeColor() that changes the value of a variable every time the color changes
-
-// FUNCTION changeColor()
-    // FOR EACH DIVS
-        // LET .coloring = background-color black (default)
-        // IF a specific colour button pressed
-        // Change the color variable to that color by background-color = ??
-    // END FOR
-// END FUNCTION
-// Put the function in penDraw()
-
-
+let color = 'black';
 
 createDiv(16);
 penDraw();
