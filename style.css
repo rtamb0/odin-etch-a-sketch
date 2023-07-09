@@ -10,6 +10,11 @@ section {
     justify-content: space-between;
 }
 
+button {
+    border-style: solid;
+    border-radius: 10px;
+}
+
 .info {
     text-align: center;
     display: flex;
@@ -18,9 +23,9 @@ section {
     margin: 0 10vh;
 }
 
-button {
-    border-style: solid;
-    border-radius: 10px;
+.info button {
+    padding: 5px 45px;
+    margin: 5px;
 }
 
 .etch-a-sketch {
