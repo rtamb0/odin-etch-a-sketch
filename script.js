@@ -120,6 +120,7 @@ function penDraw() {
     drawButton.classList.add('selected');
     eraserButton.classList.remove('selected');
     const gridDiv = document.querySelectorAll('.grid-divs');
+    const body = document.querySelector('#body');
     let isClicked = false;
     gridDiv.forEach((div) => {
         div.addEventListener('mouseover', (e) => {
@@ -155,7 +156,7 @@ function penDraw() {
                         break;
                 };
             });
-            div.addEventListener('mouseup', (e) => {
+            body.addEventListener('mouseup', (e) => {
                 isClicked = false;
             });
             if (isClicked === true) {
@@ -190,10 +191,6 @@ function penDraw() {
                 };
             };
         });
-    });
-    const divsContainer = document.querySelector('.etch-a-sketch');
-    divsContainer.addEventListener('mouseleave', (e) => {
-        isClicked = false;
     });
 };
 
@@ -208,6 +205,7 @@ function penEraser() {
     eraserButton.classList.add('selected');
     drawButton.classList.remove('selected');
     const gridDiv = document.querySelectorAll('.grid-divs');
+    const body = document.querySelector('#body');
     let isClicked = false;
     gridDiv.forEach((div) => {
         div.addEventListener('mouseover', (e) => {
@@ -215,17 +213,13 @@ function penEraser() {
                 isClicked = true;
                 div.removeAttribute('style');
             });
-            div.addEventListener('mouseup', (e) => {
+            body.addEventListener('mouseup', (e) => {
                 isClicked = false;
             });
             if (isClicked === true) {
                 div.removeAttribute('style');
             };
         });
-    });
-    const divsContainer = document.querySelector('.etch-a-sketch');
-    divsContainer.addEventListener('mouseleave', (e) => {
-        isClicked = false;
     });
 };
 
