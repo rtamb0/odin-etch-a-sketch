@@ -4,8 +4,8 @@
 const divMessage = document.createElement('div');
 
 function createDiv(amount) {
+    const divsContainer = document.querySelector('#square-divs');
     for (let i = 1; i <= amount; i++) {
-        const divsContainer = document.querySelector('#square-divs');
         const divRow = document.createElement('div');
         divRow.classList.add('row-divs');
         divsContainer.appendChild(divRow);
@@ -191,13 +191,17 @@ function penDraw() {
             };
         });
     });
+    const divsContainer = document.querySelector('.etch-a-sketch');
+    divsContainer.addEventListener('mouseleave', (e) => {
+        isClicked = false;
+    });
 };
 
 function resetDraw() {
     const gridDiv = document.querySelectorAll('.grid-divs');
     gridDiv.forEach((div) => {
         div.removeAttribute('style');
-    })
+    });
 };
 
 function penEraser() {
@@ -218,6 +222,10 @@ function penEraser() {
                 div.removeAttribute('style');
             };
         });
+    });
+    const divsContainer = document.querySelector('.etch-a-sketch');
+    divsContainer.addEventListener('mouseleave', (e) => {
+        isClicked = false;
     });
 };
 
